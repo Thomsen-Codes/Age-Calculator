@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="inputt">
+        <div class="input-container">
+          <label id="text1" for="day">DAY</label>
+          <input type="number" id="day" required placeholder="DD" />
+          <p id="error-day" style="color: red"></p>
+        </div>
+        <div class="input-container">
+          <label id="text2" for="month">MONTH</label>
+          <input type="number" id="month" required placeholder="MM" />
+          <p id="error-month" style="color: red"></p>
+        </div>
+        <div class="input-container">
+          <label id="text3" for="year">YEAR</label>
+          <input type="number" id="year" required placeholder="YYYY" />
+          <p id="error-year" style="color: red"></p>
+        </div>
+      </div>
+      <div class="lollipop">
+        <button class="lollipop-head" onclick="calculateAge()">
+          <img src="assets/images/icon-arrow.svg" alt="" />
+        </button>
+        <hr class="lollipop-stick" />
+      </div>
+      <div class="answers">
+        <p class="allP">
+          <span class="value-dashes" id="years">--</span>
+          <label for="years">years</label>
+        </p>
+        <p class="allP">
+          <span class="value-dashes" id="months">--</span>
+          <label for="months">months</label>
+        </p>
+        <p class="allP">
+          <span class="value-dashes" id="days">--</span>
+          <label for="days">days</label>
+        </p>
+      </div>
+    </div>
+    <div class="attribution">
+      <small
+        >Challenge by
+        <a
+          class="text-decoration-none"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a class="text-decoration-none" href="#">Xavier Thomsen</a>.</small
+      >
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: hsl(0, 0%, 86%);
+  height: 100vh;
+  margin: 0;
+}
+
+#text1,
+#text2,
+#text3 {
+  color: rgb(107, 107, 107);
+}
+.main-container {
+  width: 590px;
+  height: 460px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: 2px 2px 5px 0px rgb(100, 100, 100); */
+}
+
+#error-day,
+#error-month,
+#error-year {
+  font-size: 12px;
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  object-fit: contain;
+}
+
+.lollipop-head {
+  z-index: 2;
+}
+
+.lollipop-stick {
+  z-index: 0;
+}
+
+.input-container .error {
+  border-color: red;
+}
+
+.input-container .error:focus {
+  border-color: red;
+}
+label.error {
+  color: red;
+}
+.text {
+  font-size: small;
+  padding: 0;
+  margin: 4px;
+}
+
+label#text1,
+#text2,
+#text3 {
+  font-size: 12px;
+  margin: 5px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  padding-left: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  font-size: 26px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: purple;
+}
+
+button {
+  order: 2;
+  background-color: hsl(259, 100%, 65%);
+  scale: 1.2;
+  border-radius: 50%;
+  border: transparent;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: black;
+  border: none;
+  cursor: grab;
+}
+
+button:active {
+  cursor: grabbing;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.inputt {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  width: 450px;
+  object-fit: contain;
+  padding-left: 0px;
+  height: 120px;
+}
+
+.lollipop {
+  width: 95%;
+  padding: 40px;
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lollipop-stick {
+  opacity: 0.3;
+  width: 85%;
+  margin-right: 0;
+  border: none;
+  height: 1px;
+  background-color: gray;
+}
+
+.answers {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 40px;
+  font-size: 40px;
+  margin: 0;
+}
+
+img {
+  scale: 0.7;
+}
+
+.allP {
+  margin: 0;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.value-dashes {
+  color: hsl(259, 100%, 65%);
+}
+
+.error-state p {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 602px) {
+  .main-container {
+    width: 400px;
+    height: 400px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .inputt {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    width: 300px;
+    object-fit: contain;
+    padding-left: 5px;
+  }
+
+  input[type="number"] {
+    width: 70px;
+    height: 40px;
+    padding-left: 8px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .input-container {
+    height: 100px;
+  }
+
+  .lollipop {
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+  }
+
+  button {
+    scale: 1;
+  }
+
+  .allP {
+    font-size: 50px;
+  }
+
+  .answers {
+    padding: 30px;
+    padding-top: 30px;
+  }
+  .lollipop {
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: relative; /* Add position relative to create a stacking context */
+  }
+
+  button {
+    scale: 1;
+    margin-top: 10px;
+    position: relative; /* Add position relative to create a stacking context */
+  }
+
+  .lollipop-stick {
+    width: 80%;
+    position: absolute; /* Set position absolute to overlap with the button */
+
+    bottom: 0; /* Position the hr at the bottom of the container */
+  }
+}
+@media (max-width: 407px) {
+  .main-container {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 323px) {
+  .main-container {
+    width: 320px;
+  }
+}
